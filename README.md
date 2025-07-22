@@ -75,12 +75,12 @@ SF_SUBJECT=<admin user name>[^9]
 SF_AUTH_ENDPOINT=https://login.salesforce.com/services/oauth2/token [^2]
 SF_PUB_SUB_ENDPOINT=api.pubsub.salesforce.com:7443 [^3]
 SF_PUB_SUB_EVENT_RECEIVE_LIMIT=100
-SF_INSTANCE_URL=<Salesforce core app instance url> [^4][^9]
+SF_INSTANCE_URL=<Salesforce core app instance url> [^4]
 SF_SCRT_INSTANCE_URL=<Salesforce core app scrt2 instance url> [^5][^9]
 SF_ORG_ID=<orgId>[^9]
 SF_AUTHORIZATION_CONTEXT=<ConversationChannelDefinition API Name>[^9]
 CHANNEL_ADDRESS_IDENTIFIER=<Channel address identifier> [^6]
-END_USER_CLIENT_IDENTIFIER=<End user client identifier>
+END_USER_CLIENT_IDENTIFIER=<End user client identifier> [^12]
 PORT=3000
 IS_OTT=true[^8]
 API_VERSION=<Ex: "63.0" API version for the current release of salesforce app>[^10]
@@ -119,8 +119,9 @@ AUTO_CREATE_AGENT_WORK=<true or false>[^7][^9]
 - [^8] Specify if it's an OTT only, applying to the circumstance of no contact center
 - [^9] No need to specify if you choose IS_OTT=false
 - [^10] The API version for the current release of salesforce app. This should be specified in the format "XX.0", where XX is the version number. For example, "62.0".
-- [^11] The admin password for the Salesforce instance. Ensure this is securely stored and not exposed in public repositories.
-
+- [^11] The admin password and security token for the Salesforce instance. Ensure this is securely stored and not exposed in public repositories.
+- [^12] Can be any string
+  
 ### Launch application 
  
 ```
